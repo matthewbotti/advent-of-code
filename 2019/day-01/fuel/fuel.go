@@ -9,7 +9,7 @@ func FuelRequired(mass float64) float64 {
 	return math.Floor(mass/3) - 2
 }
 
-//
+// RecursiveFuel determines fuel needed recursivley given given a mass.
 func RecursiveFuel(mass float64) (sum float64) {
 	fuelNeeded := FuelRequired(mass)
 	for sum = fuelNeeded; FuelRequired(fuelNeeded) > 0; sum += fuelNeeded {
